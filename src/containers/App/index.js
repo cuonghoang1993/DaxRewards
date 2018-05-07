@@ -4,8 +4,8 @@ import Homepage from "../Homepage";
 import Loginpage from "../Loginpage";
 import Adminpage from "../Adminpage";
 import "../../fonts/font-awesome/css/fontawesome-all.css";
-import "./index.css";
 import "./style.bundle.css";
+import "./index.css";
 
 export default function App() {
   return (

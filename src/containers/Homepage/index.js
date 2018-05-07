@@ -5,6 +5,16 @@ import GrabFixer from "../../images/grab-auto-green-fixer.png";
 import GrabRetail from "../../images/grab-green-retail.png";
 import GrabHealth from "../../images/grab-health-green.png";
 
+import Slider from "react-slick";
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
 class Homepage extends Component {
   constructor() {
     super();
@@ -15,7 +25,7 @@ class Homepage extends Component {
 
   openModal(e, modalName) {
     e.preventDefault();
-    document.body.classList.add("modal-open");
+    document.body.classList.add("index", "modal-open");
     this.setState({ modal: modalName });
   }
 
@@ -25,12 +35,32 @@ class Homepage extends Component {
 
   render() {
     if (this.state.modal === "") {
-      document.body.classList.remove("modal-open");
+      document.body.classList.remove("index", "modal-open");
     }
 
     return (
       <div className="index">
         <Header />
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
         <section className="bg-light-gray">
           <div
             className="row"

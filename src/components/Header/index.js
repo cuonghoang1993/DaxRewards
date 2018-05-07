@@ -4,7 +4,9 @@ import GrabLogo from "../../images/grab-logo-green.png";
 class Header extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      expanded: false
+    };
   }
 
   render() {
@@ -16,9 +18,8 @@ class Header extends Component {
             <button
               type="button"
               className="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false"
+              onClick={() => this.setState({ expanded: !this.state.expanded })}
             >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar" />
@@ -27,25 +28,27 @@ class Header extends Component {
             </button>
             <div className="navbar-logo">
               <a href="/">
-                <img height="30" src={GrabLogo} alt="Grab logo green" />
+                <img
+                  className="m-logo_grab"
+                  src={GrabLogo}
+                  alt="Grab logo green"
+                />
               </a>
             </div>
           </div>
 
           {/* Collect the nav links, forms, and other content for toggling */}
           <div
-            className="collapse navbar-collapse"
-            id="bs-example-navbar-collapse-1"
+            className={`collapse navbar-collapse header-index${
+              this.state.expanded ? " in" : ""
+            }`}
           >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="/">Rewards</a>
+                <a href="/">Quà tặng</a>
               </li>
               <li>
-                <a href="/redemption">Redemption</a>
-              </li>
-              <li>
-                <a href="/faq">FAQ</a>
+                <a href="/faq">Đăng nhập</a>
               </li>
             </ul>
           </div>
