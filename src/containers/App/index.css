@@ -11468,3 +11468,7 @@ body.bootsy_text_area.form-control {
 .modal-open {
   overflow: hidden;
 }
+
+.m-logo_grab {
+  height: 30px;
+}
