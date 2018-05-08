@@ -10,7 +10,7 @@ import AsideMenu from "../../components/AsideMenu";
 import ContentContainer from "../../components/ContentContainer";
 import ContentInner from "../../components/ContentInner";
 
-class Adminpage extends Component {
+class AdminDriverpage extends Component {
   constructor() {
     super();
 
@@ -27,17 +27,17 @@ class Adminpage extends Component {
           <HeaderAdmin />
           <div className="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
             <AsideMenu />
-            <ContentContainer title={"Danh sách quà tặng đã đổi"}>
-              <ContentInner title={"quà tặng đã đổi"}>
+            <ContentContainer title={"Danh sách tài xế"}>
+              <ContentInner title={"tài xế"}>
                 {/* begin: Search Form */}
                 <div className="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
                   <div className="row align-items-center">
-                    <div className="col-lg-8 order-2 order-xl-1">
+                    <div className="col-lg-6 order-2 order-xl-1">
                       <div className="form-group m-form__group row align-items-center">
                         <div className="col-md-11">
                           <div className="m-form__group m-form__group--inline">
                             <div className="m-form__label">
-                              <label>Danh sách quà tặng đã đổi:</label>
+                              <label>Danh sách tài xế:</label>
                             </div>
                             <DateRangePicker
                               startDate={this.state.startDate}
@@ -82,6 +82,15 @@ class Adminpage extends Component {
                       </a>
                       <div className="m-separator m-separator--dashed d-xl-none" />
                     </div>
+                    <div className="col-lg-2 order-1 order-xl-2 m--align-right">
+                      <a className="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+                        <span>
+                          <i className="fa fa-plus" />
+                          <span>Thêm tài xế</span>
+                        </span>
+                      </a>
+                      <div className="m-separator m-separator--dashed d-xl-none" />
+                    </div>
                   </div>
                 </div>
                 {/* end: Search Form */}
@@ -102,4 +111,4 @@ class Adminpage extends Component {
   }
 }
 
-export default Adminpage;
+export default AdminDriverpage;

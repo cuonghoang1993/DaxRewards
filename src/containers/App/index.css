@@ -9047,7 +9047,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  text-align: center;
+  /* text-align: center; */
   color: white;
 }
 
@@ -9872,10 +9872,10 @@ p.left-align {
   text-align: left;
 }
 
-.row {
+/* .row {
   margin-right: 0px;
   margin-left: 0px;
-}
+} */
 
 footer {
   background-color: #3a3d45;

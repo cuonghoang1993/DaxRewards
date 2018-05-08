@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import GrabLogo from "../../images/grab-logo-green.png";
-import UserImg from "../../images/user1.jpg";
 
 class FooterAdmin extends Component {
   render() {

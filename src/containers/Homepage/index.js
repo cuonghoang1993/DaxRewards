@@ -74,7 +74,9 @@ class Homepage extends Component {
                 <div
                   className="row"
                   style={{
-                    paddingTop: "20px"
+                    paddingTop: "20px",
+                    marginLeft: 0,
+                    marginRight: 0
                   }}
                 >
                   <a
